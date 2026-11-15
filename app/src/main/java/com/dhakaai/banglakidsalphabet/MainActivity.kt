@@ -22,7 +22,7 @@ class MainActivity:Activity(),TextToSpeech.OnInitListener{
  private fun label(s:String,size:Float,color:Int,bold:Boolean=false)=TextView(this).apply{text=s;textSize=size;setTextColor(color);gravity=Gravity.CENTER;if(bold)setTypeface(typeface,Typeface.BOLD)}
  override fun onCreate(savedInstanceState:Bundle?){
   super.onCreate(savedInstanceState);tts=TextToSpeech(this,this)
-  val root=LinearLayout(this).apply{orientation=1;setPadding(14,12,14,14);background=Color.rgb(255,249,235)}
+  val root=LinearLayout(this).apply{orientation=1;setPadding(14,12,14,14);setBackgroundColor(Color.rgb(255,249,235))}
   val scroll=ScrollView(this)
   val page=LinearLayout(this).apply{orientation=1}
   val hero=LinearLayout(this).apply{orientation=LinearLayout.HORIZONTAL;gravity=Gravity.CENTER_VERTICAL;background=shape(Color.rgb(255,222,143),26f);setPadding(14,12,14,12)}
